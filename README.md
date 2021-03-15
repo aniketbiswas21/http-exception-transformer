@@ -22,3 +22,15 @@ Simply integrate the error to response transformer using
 ```js
 app.use(HttpExceptionTransformer)
 ```
+
+Renders the following response
+```json
+{
+  "code": 400,
+  "error": true,
+  "message": "Only +ve ids accepted"
+}
+```
+
+## Development
+Since the codebase is redundant, and almost all derived classes have the same structure, we're geneating the exceptions from a json file. Therefore if you wish to make changes in the exception body, please change the codebase in the generators directory. 
