@@ -26,7 +26,7 @@ export const exceptionList: Array<SourceRow> = [
   {
     code: 500,
     name: 'InternalServerException',
-    message: "The server has encountered a situation it doesn't know how to handle.",
+    message: 'The server has encountered a situation it does not know how to handle.',
     reference: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500',
   },
 ]
