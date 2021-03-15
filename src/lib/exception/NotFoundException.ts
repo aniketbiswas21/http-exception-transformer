@@ -6,4 +6,4 @@ class NotFoundException extends HttpException {
   }
 }
 
-export { NotFoundException }
+export default NotFoundException

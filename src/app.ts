@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import express, { Request, Response } from 'express'
 import { HttpExceptionTransformer } from './lib'
-import { NotFoundException } from './lib/exception/NotFoundExceeption'
+import { NotFoundException } from './lib/exception'
 
 const app = express()
 
