@@ -3,4 +3,5 @@ export interface ResponseFormat {
   error: boolean
   message: string
   payload: any
+  reference: string
 }

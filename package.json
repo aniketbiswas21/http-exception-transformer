@@ -1,8 +1,8 @@
 {
-  "name": "http-exception-handler",
+  "name": "http-exception-transformer",
   "version": "1.0.0",
   "main": "dist/lib/index.js",
-  "repository": "https://github.com/UniAuth/http-exception-handler",
+  "repository": "https://github.com/UniAuth/http-exception-transformer",
   "author": "Yash Kumar Verma <yk.verma2000@gmail.com>",
   "license": "MIT",
   "scripts": {

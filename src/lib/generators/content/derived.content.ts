@@ -10,6 +10,7 @@ import { HttpException } from './HttpException'
 class ${exception.name} extends HttpException {
   constructor(message?: string, payload?: any) {
     super(${exception.code}, message === undefined ? '${exception.message}' : message, payload)
+    this.reference = '${exception.reference}'
   }
 }
 
