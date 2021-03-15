@@ -10,7 +10,7 @@
     "build": "tsc",
     "start:dev": "nodemon",
     "start:prod": "node ./dist/server.js",
-    "test": "./node_modules/mocha/bin/mocha --require ts-node/register --exit ./test/**/*.ts src/modules/**/*.spec.ts",
+    "test": "./node_modules/mocha/bin/mocha --require ts-node/register --exit ./test/**/*.ts",
     "coverage": "nyc --reporter=lcov yarn test",
     "derived:create": "ts-node src/lib/generators/exceptionWriter.ts",
     "derived:destroy": "rm -rf src/lib/exceptions/*.gen.ts"

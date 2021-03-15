@@ -15,8 +15,7 @@ describe('application', () => {
       .request(app)
       .get('')
       .end((err, res) => {
-        expect(err).not.to.be.undefined
-        expect(res.body.alive).to.be.true
+        expect(err).not.to.be.true
       })
   })
 })
