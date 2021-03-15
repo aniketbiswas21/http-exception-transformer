@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { Request, Response, NextFunction, Errback } from 'express'
-import { HttpException } from './exception/HttpException'
+import { HttpException } from './generators/HttpException'
 
 const HttpExceptionTransformer = (err: Errback, req: Request, res: Response, nxt: NextFunction) => {
   if (err instanceof HttpException) {

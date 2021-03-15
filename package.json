@@ -12,7 +12,8 @@
     "start:prod": "node ./dist/server.js",
     "test": "./node_modules/mocha/bin/mocha --require ts-node/register --exit ./test/**/*.ts src/modules/**/*.spec.ts",
     "coverage": "nyc --reporter=lcov yarn test",
-    "codecov": "codecov"
+    "derived:create": "ts-node src/lib/generators/exceptionWriter.ts",
+    "derived:destroy": "rm -rf src/lib/exceptions/*.gen.ts"
   },
   "devDependencies": {
     "@types/express": "^4.17.11",
