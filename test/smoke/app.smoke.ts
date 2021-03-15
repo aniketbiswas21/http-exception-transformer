@@ -14,7 +14,7 @@ describe('application', () => {
     chai
       .request(app)
       .get('')
-      .end((err, res) => {
+      .end((err) => {
         expect(err).not.to.be.true
       })
   })
