@@ -2,7 +2,7 @@
   "name": "http-exception-handler",
   "version": "1.0.0",
   "main": "dist/lib/index.js",
-  "repository": "https://github.com/YashKumarVerma/http-exception-handler",
+  "repository": "https://github.com/UniAuth/http-exception-handler",
   "author": "Yash Kumar Verma <yk.verma2000@gmail.com>",
   "license": "MIT",
   "scripts": {
