@@ -64,14 +64,7 @@ export const exceptionList: Array<SourceRow> = [
     name:"GoneException",
     message:"This response is sent when the requested content has been permanently deleted from server, with no forwarding address",
     reference:"https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/410",
-  },
-
-  
-
-  
-  
-  
-  
+  },  
   {
     code: 500,
     name: 'InternalServerException',
