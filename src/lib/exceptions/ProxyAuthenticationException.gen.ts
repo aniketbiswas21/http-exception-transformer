@@ -1,11 +1,11 @@
 import { HttpException } from './HttpException'
 
-class UnAuthorizedException extends HttpException {
+class ProxyAuthenticationException extends HttpException {
   constructor(message?: string, payload?: any) {
     super(
-      401,
+      407,
       message === undefined
-        ? 'The client must authenticate itself to get the requested response.'
+        ? 'This is similar to 401 but authentication is needed to be done by a proxy.'
         : message,
       payload,
     )
@@ -13,4 +13,4 @@ class UnAuthorizedException extends HttpException {
   }
 }
 
-export default UnAuthorizedException
+export default ProxyAuthenticationException
