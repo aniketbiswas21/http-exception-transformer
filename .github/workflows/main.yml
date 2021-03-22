@@ -18,12 +18,9 @@ jobs:
         # Make sure the actual branch is checked out when running on pull requests
         ref: ${{ github.head_ref }}
     
-    - name: NPM Test
+    - name: npm test and build
+      uses: actions/setup-node@v2
       with:
         node-version: '14'
-      run: npm run test
-
-    - name: NPM Build
-      with:
-        node-version: '14'
-      run: npm run build
+    - run: npm test
+    - run: npm build
