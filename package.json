@@ -5,6 +5,7 @@
   "repository": "https://github.com/UniAuth/http-exception-transformer",
   "author": "Yash Kumar Verma <yk.verma2000@gmail.com>",
   "license": "MIT",
+  "keywords": ["express","middleware","error","exception","http"],
   "scripts": {
     "lint": "eslint ./src/**/*.ts --fix",
     "build": "tsc",
