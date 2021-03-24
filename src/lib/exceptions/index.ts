@@ -10,16 +10,4 @@ import ConflictException from './ConflictException.gen'
 import GoneException from './GoneException.gen'
 import InternalServerException from './InternalServerException.gen'
 
-export {
-  BadRequestException,
-  UnAuthorizedException,
-  ForbiddenException,
-  NotFoundException,
-  MethodNotAllowedException,
-  NotAcceptableException,
-  ProxyAuthenticationException,
-  RequestTimeOutException,
-  ConflictException,
-  GoneException,
-  InternalServerException,
-}
+export { BadRequestException, UnAuthorizedException, ForbiddenException, NotFoundException, MethodNotAllowedException, NotAcceptableException, ProxyAuthenticationException, RequestTimeOutException, ConflictException, GoneException, InternalServerException }
