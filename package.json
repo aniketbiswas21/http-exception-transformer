@@ -1,10 +1,11 @@
 {
   "name": "http-exception-transformer",
-  "version": "1.1.0",
+  "version": "1.2.1",
   "main": "index.js",
   "repository": "https://github.com/UniAuth/http-exception-transformer",
   "author": "Yash Kumar Verma <yk.verma2000@gmail.com>",
   "license": "MIT",
+  "keywords": ["express","middleware","error","exception","http"],
   "scripts": {
     "lint": "eslint ./src/**/*.ts --fix",
     "build": "tsc",

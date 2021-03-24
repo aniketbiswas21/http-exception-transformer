@@ -4,9 +4,11 @@ import { HttpException } from './exceptions/HttpException'
 
 const HttpExceptionTransformer = (err: Errback, req: Request, res: Response, nxt: NextFunction) => {
   if (err instanceof HttpException) {
-    return res.json(err.transformResponse())
+    const transformedResponse = err.transformResponse()
+    return res.status(transformedResponse.code).json(transformedResponse)
   }
-  nxt(err)
+
+  return nxt(err)
 }
 
 export { HttpExceptionTransformer }
