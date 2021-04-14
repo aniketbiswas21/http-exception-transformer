@@ -41,6 +41,35 @@ Now the exceptions will return a response like these
   "reference":"https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400"
 }
 ```
+## Usage with user defined callback
+
+```js
+import { HttpExceptionTransformer } from 'http-exception-transformer'
+import { BadRequestException } from 'http-exception-transformer/exceptions'
+
+app.get("/id",(req, res)=>{
+    if(req.params.id == 0){
+        throw new BadRequestException("Only +ve ids accepted", {}, () => {
+            console.log("This function will run after the error is thrown");
+        })
+    }
+})
+```
+Optionally, you can configure the error handler to run a **callback function** that runs after the error is thrown. 
+
+Now the exceptions will return a response like these
+```json
+{
+  "code": 400,
+  "error": true,
+  "message": "Only +ve ids accepted",
+  "reference":"https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400",
+  "payload": {},
+}
+```
+And, will also run the function that you defined earlier.
+
+**Note**: In order to pass in a function, it is **mandatory** to pass a payload along with it. If you don't want to pass in any payload, simply pass `{}` as the payload.
 
 ## API Reference
 The middleware and exceptions are designed to give user the flexibility to send data alongwith exceptions, and also the option to set a custom error message if required.
@@ -48,8 +77,10 @@ The middleware and exceptions are designed to give user the flexibility to send 
 The signature of the exception is the following. 
 - the message is **optional** : if the message is not supplied, then the error message corresponding to the code is automatically shared.
 - the payload is **optional** : just in case you want to send data alongwith the exceptions, simply pass the data to be shared.
+- the callback is **optional** : if you want to run a function, simply pass your function to be executed. Defaults to `() => null`.
+
 ```js
-SomeException(message?: string, payload?: any) {}
+SomeException(message?: string, payload?: any, callback: () => void = () => null) {}
 ```
 
 The following are completely valid implementations
