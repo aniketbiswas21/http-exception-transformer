@@ -23,11 +23,11 @@ jobs:
       - name: npm install for main directory
         run: npm install
 
+      - name: npm install for example directory
+        working-directory: ./example
+        run: npm install
+
       - name: npm test and build for main directory
         run: |
           npm run test
           npm run build
-
-      - name: npm install for example directory
-        working-directory: ./example
-        run: npm install
