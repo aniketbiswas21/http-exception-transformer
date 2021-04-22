@@ -21,7 +21,7 @@ jobs:
           node-version: '14'
 
       - name: npm install for main directory
-      - run: npm install
+        run: npm install
 
       - name: npm test and build for main directory
         run: |
