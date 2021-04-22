@@ -1,11 +1,12 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import express from 'express'
+import express, { Request, Response } from 'express'
 import { HttpExceptionTransformer } from 'http-exception-transformer'
 import { NotFoundException } from 'http-exception-transformer/exceptions'
 
 const app = express()
 
-app.get('/', (req, res) => {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+app.get('/', (req: Request, res: Response) => {
   throw new NotFoundException('Page Not Found')
 })
 
