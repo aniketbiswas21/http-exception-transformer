@@ -5,18 +5,13 @@ class HttpException extends Error {
 
   payload: any
 
-  code: number | string
+  code: number
 
   reference: string
 
   userCallback: () => void
 
-  constructor(
-    code: number | string,
-    message: string,
-    payload?: any,
-    callback: () => void = () => null,
-  ) {
+  constructor(code: number, message: string, payload?: any, callback: () => void = () => null) {
     super(message)
     this.name = 'GenericHttpException'
     this.message = message
