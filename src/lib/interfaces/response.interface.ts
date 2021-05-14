@@ -1,5 +1,5 @@
 export interface ResponseFormat {
-  code: number
+  code: number | string
   error: boolean
   message: string
   payload: any
