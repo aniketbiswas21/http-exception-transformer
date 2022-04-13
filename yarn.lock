@@ -244,9 +244,9 @@
     "@types/connect" "*"
     "@types/node" "*"
 
-"@types/chai@4", "@types/chai@^4.2.15":
-  version "4.2.15"
-  resolved "https://registry.npmjs.org/@types/chai/-/chai-4.2.15.tgz"
+"@types/chai@4", "@types/chai@^4.3.1":
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/@types/chai/-/chai-4.3.1.tgz#e2c6e73e0bdeb2521d00756d099218e9f5d90a04"
 
 "@types/connect@*":
   version "3.4.34"
